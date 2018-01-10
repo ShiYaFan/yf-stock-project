@@ -1,0 +1,32 @@
+//
+//  PrefixHeader.pch
+//  yf-jd-phone
+//
+//  Created by yafan on 2018/1/3.
+//  Copyright © 2018年 shiyafan. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import "MJExtension.h"
+#import "UIColor+Hex.h"
+#import "AppBaseViewController.h"
+#import "BaseTabBarController.h"
+#import "BaseNavigationController.h"
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#define ORIGIN_Y(view)    (view.frame.origin.y)
+#define ORIGIN_X(view)    (view.frame.origin.x)
+
+#define VIEW_WIDTH(view)    (view.bounds.size.width)
+#define VIEW_HEIGHT(view)    (view.bounds.size.height)
+
+#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+
+#define NAV_HEIGHT 64
+#define BAR_HEIGHT 50
+#define RGBA_COLOR(R, G, B, A) [UIColor colorWithRed:((R) / 255.0f) green:((G) / 255.0f) blue:((B) / 255.0f) alpha:A]
+#define RGB_COLOR(R, G, B) [UIColor colorWithRed:((R) / 255.0f) green:((G) / 255.0f) blue:((B) / 255.0f) alpha:1.0f]
+
+#endif /* PrefixHeader_pch */
