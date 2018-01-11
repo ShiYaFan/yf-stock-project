@@ -1769,7 +1769,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QKBW955V26;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/mayige/yf-jd-phone/yf-jd-phone/app-system/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "/Users/mayige/yf-stock-project/yf-jd-phone/yf-jd-phone/app-system/PrefixHeader.pch";
 				INFOPLIST_FILE = "yf-jd-phone/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "shiyafan.yf-jd-phone";
@@ -1786,7 +1786,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QKBW955V26;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/mayige/yf-jd-phone/yf-jd-phone/app-system/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "/Users/mayige/yf-stock-project/yf-jd-phone/yf-jd-phone/app-system/PrefixHeader.pch";
 				INFOPLIST_FILE = "yf-jd-phone/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "shiyafan.yf-jd-phone";
