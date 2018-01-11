@@ -8,6 +8,7 @@
 
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
+#import <SDWebImage/UIImageView+WebCache.h>
 #import "MJExtension.h"
 #import "UIColor+Hex.h"
 #import "AppBaseViewController.h"

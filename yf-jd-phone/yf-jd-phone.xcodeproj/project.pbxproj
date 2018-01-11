@@ -317,6 +317,7 @@
 		DC1C54121FFCF1DB00D0907B /* AppMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1C54111FFCF1DB00D0907B /* AppMineViewController.m */; };
 		DC1C54151FFCF1F000D0907B /* AppSubscibeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1C54141FFCF1F000D0907B /* AppSubscibeViewController.m */; };
 		DC1C54181FFCF20800D0907B /* AppInterfaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1C54171FFCF20800D0907B /* AppInterfaceViewController.m */; };
+		DCB967CB2007593700EDD022 /* (null) in Resources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1370,6 +1371,7 @@
 				DC0A520E1FFE064F0064911F /* 箭头朝上.png in Resources */,
 				DC0A52CA1FFE06500064911F /* message@3x.png in Resources */,
 				DC0A52201FFE06500064911F /* newSuccess@2x.png in Resources */,
+				DCB967CB2007593700EDD022 /* (null) in Resources */,
 				DC0A52E21FFE06500064911F /* easy@2x.png in Resources */,
 				DC0A52101FFE064F0064911F /* banner_default@2x.png in Resources */,
 				DC0A53061FFE06500064911F /* pushSounds.caf in Resources */,
@@ -1767,7 +1769,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QKBW955V26;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/mayige/syf-swift/yf-jd-phone/yf-jd-phone/app-system/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "/Users/mayige/yf-jd-phone/yf-jd-phone/app-system/PrefixHeader.pch";
 				INFOPLIST_FILE = "yf-jd-phone/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "shiyafan.yf-jd-phone";
@@ -1784,7 +1786,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QKBW955V26;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/mayige/syf-swift/yf-jd-phone/yf-jd-phone/app-system/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "/Users/mayige/yf-jd-phone/yf-jd-phone/app-system/PrefixHeader.pch";
 				INFOPLIST_FILE = "yf-jd-phone/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "shiyafan.yf-jd-phone";

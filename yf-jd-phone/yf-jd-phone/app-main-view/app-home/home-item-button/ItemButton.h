@@ -10,4 +10,6 @@
 
 @interface ItemButton : UIView
 
+-(void)createButtonWithArray:(NSArray *)array;
+
 @end

@@ -12,14 +12,17 @@
 #import "strategy.h"
 #import "ItemModel.h"
 #import "BannerModel.h"
+#import "ItemButton.h"
 static const NSInteger BANNER_HEIGHT = 120;
-
+static const NSInteger HOME_INSTANCE = 10;
 @interface AppHomeViewController()<SDCycleScrollViewDelegate>
 @property (nonatomic, strong) NSMutableArray *listArray;
 @property (nonatomic, strong) NSMutableArray *itemArray;
 @property (nonatomic, strong) NSMutableArray *picArray;
 @property (nonatomic, strong) SDCycleScrollView *cycleScrollView;
 @property (nonatomic, strong) UIScrollView *bcgScrollView;
+@property (nonatomic, strong) ItemButton *showItemButton;
+
 @end
 @implementation AppHomeViewController
 
@@ -29,8 +32,9 @@ static const NSInteger BANNER_HEIGHT = 120;
     //布局UI
     [self.view addSubview:self.bcgScrollView];
     self.bcgScrollView.contentSize = CGSizeMake(VIEW_WIDTH(self.view), VIEW_HEIGHT(self.view)+100);
+   
     [self.bcgScrollView addSubview:self.cycleScrollView];
-    
+    [self.bcgScrollView addSubview:self.showItemButton];
     //请求网络
     [self appHomeRequestData];
 
@@ -65,16 +69,18 @@ static const NSInteger BANNER_HEIGHT = 120;
     //请求button-show
     [[appNetwork shareAppNetwork] requestWithURLString:@"/source_file/homeConfiguration.json" parameters:nil method:@"GET" callBack:^(id resposeObject) {
         if ([resposeObject[@"code"] isEqualToString:@"OK"]) {
+            self.itemArray = [NSMutableArray new];
             for( id dit in resposeObject[@"listData"]){
                 ItemModel *_itemModel = [ItemModel mj_objectWithKeyValues:dit];
                 [weakSelf.itemArray addObject:_itemModel];
             }
+            [weakSelf.showItemButton createButtonWithArray:weakSelf.itemArray];
         }
     }];
 }
 #pragma mark --cycleScrollDelegate
 -(void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
-    
+    NSLog(@"%@",self.picArray[index]);
 }
 #pragma mark --懒加载
 -(NSMutableArray *)picArray{
@@ -102,5 +108,12 @@ static const NSInteger BANNER_HEIGHT = 120;
         _bcgScrollView = [[UIScrollView alloc]initWithFrame:self.view.frame];
     }
     return _bcgScrollView;
+}
+-(ItemButton *)showItemButton{
+    if (!_showItemButton) {
+        _showItemButton = [[ItemButton alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.cycleScrollView.frame)+HOME_INSTANCE, VIEW_WIDTH(self.view),  VIEW_WIDTH(self.view)/2)];
+        _showItemButton.backgroundColor = [UIColor whiteColor];
+    }
+    return _showItemButton;
 }
 @end
