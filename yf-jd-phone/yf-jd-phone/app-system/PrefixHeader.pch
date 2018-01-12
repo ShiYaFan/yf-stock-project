@@ -11,9 +11,12 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "MJExtension.h"
 #import "UIColor+Hex.h"
+#import "UIView+YFView.h"
+#import "UserLoginMessage.h"
 #import "AppBaseViewController.h"
 #import "BaseTabBarController.h"
 #import "BaseNavigationController.h"
+#import "AppDelegate.h"
 
 #ifdef DEBUG
 
@@ -39,5 +42,5 @@
 #define BAR_HEIGHT 50
 #define RGBA_COLOR(R, G, B, A) [UIColor colorWithRed:((R) / 255.0f) green:((G) / 255.0f) blue:((B) / 255.0f) alpha:A]
 #define RGB_COLOR(R, G, B) [UIColor colorWithRed:((R) / 255.0f) green:((G) / 255.0f) blue:((B) / 255.0f) alpha:1.0f]
-
+#define APPDELEGATE ((AppDelegate*)([[UIApplication sharedApplication] delegate]))
 #endif /* PrefixHeader_pch */

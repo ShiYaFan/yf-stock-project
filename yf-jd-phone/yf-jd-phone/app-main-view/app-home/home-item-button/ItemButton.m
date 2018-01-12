@@ -43,7 +43,7 @@ static const int BUTTON_TAG_DEFAULT =1000; //button默认起始值
         bar_button.frame = bar_button_frame;
         bar_button.ItemLabel.text = model.title;
         bar_button.ItemLabel.textColor = [UIColor blackColor];
-        
+       
         [bar_button.itemImageView sd_setImageWithURL:[NSURL URLWithString:model.picUrl] placeholderImage:[UIImage imageNamed:@"home-magic"]];
         bar_button.tag = i + BUTTON_TAG_DEFAULT;
         [bar_button addTarget:self action:@selector(barButtonAction:) forControlEvents:UIControlEventTouchUpInside];

@@ -15,6 +15,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    //内容取用户数据 如果有数据赋给UserLoginMessage
+    
+    [UserLoginMessage shareUserLoginMessage].isLogin = NO; //用户没有登录
+    
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];

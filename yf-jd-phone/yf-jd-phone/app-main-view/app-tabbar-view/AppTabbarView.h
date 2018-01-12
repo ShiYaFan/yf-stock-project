@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class AppBarButton;
 @class AppTabbarView;
 @protocol AppTabbarViewDelegate<NSObject>
 @optional
@@ -20,4 +20,5 @@
 @property (nonatomic, strong) UIColor *titleSelectedColor; //选中状态标题颜色
 @property (nonatomic, assign) NSInteger defaultSelectedButton; //默认选中第几个button 必须先设置了defaultSelectedButton属性才能生效
 @property (nonatomic, strong) NSArray *tabbarModelArray; //多少个button
+@property (nonatomic, strong) AppBarButton *tabCenterPlus; //中间的加号按钮
 @end

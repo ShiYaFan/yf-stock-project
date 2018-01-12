@@ -23,6 +23,7 @@ static const int BUTTON_TAG_DEFAULT =1000; //button默认起始值
     self = [super initWithFrame:frame];
     if(self){
 //        self.backgroundColor = [UIColor redColor];
+        
         [self initDefault];
     }
     return self;
@@ -31,6 +32,7 @@ static const int BUTTON_TAG_DEFAULT =1000; //button默认起始值
 -(void)initDefault{
     self.isCenterButton = YES;
     self.defaultSelectedButton = 0;
+    
 }
 -(void)layoutSubviews{
     [super layoutSubviews];
@@ -39,6 +41,20 @@ static const int BUTTON_TAG_DEFAULT =1000; //button默认起始值
     当view的frame发生改变的时候。
     滑动UIScrollView的时候*/
     NSLog(@"%s",__func__);
+}
+#pragma mark --懒加载
+-(AppBarButton *)tabCenterPlus{
+    if (!_tabCenterPlus) {
+        _tabCenterPlus = [AppBarButton new];
+        _tabCenterPlus.itemImageView.image = [UIImage imageNamed:@"tab_center_plus"];
+//        _tabCenterPlus.backgroundColor = [UIColor whiteColor];
+        _tabCenterPlus.ItemLabel.text = @"创建";
+        _tabCenterPlus.ItemLabel.textColor = self.titleNormalColor;
+        _tabCenterPlus.frame = CGRectMake(VIEW_WIDTH(self)/5 * 2, -BAR_HEIGHT/2,VIEW_WIDTH(self)/5, BAR_HEIGHT*3/2);
+
+        [_tabCenterPlus addTarget:self action:@selector(centerAction) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _tabCenterPlus;
 }
 #pragma mark --setter方法
 -(void)setDefaultSelectedButton:(NSInteger)defaultSelectedButton{
@@ -51,8 +67,14 @@ static const int BUTTON_TAG_DEFAULT =1000; //button默认起始值
         AppTabbarModel *obj = tabbarModelArray[i];
         [self createButtonWithNormalName:obj.normalImageString addSelectedName:obj.selectedImageString andTitle:obj.tabbarTitle andIndex:i];
     }
+    
     AppBarButton *button = self.subviews[self.defaultSelectedButton];
     [self barButtonAction:button];
+   //添加tabbar 横线
+    UIView *lineView = [UIView productLineViewWithWidth:CGRectMake(0, 0, VIEW_WIDTH(self), 1)];
+    [self addSubview:lineView];
+    //添加中间加号按钮
+     [self addSubview:self.tabCenterPlus];
 }
 #pragma mark --创建button工厂
 -(void)createButtonWithNormalName:(NSString *)normal addSelectedName:(NSString *)selected andTitle:(NSString *)title andIndex:(int)index{
@@ -87,6 +109,18 @@ static const int BUTTON_TAG_DEFAULT =1000; //button默认起始值
     [self addSubview:barButton];
 }
 #pragma mark --切换按钮的点击事件
+-(void)centerAction{
+    if([self.appTabbarDelegate respondsToSelector:@selector(appTabbarView:from:to:)]){
+        NSInteger from;
+        if (!_previousBtn) {
+            from = 0;
+        }else{
+            from =_previousBtn.tag-BUTTON_TAG_DEFAULT;
+        }
+          NSLog(@"%ld",from);
+        [self.appTabbarDelegate appTabbarView:self from:from to:4];
+    }
+}
 -(void)barButtonAction:(AppBarButton *)sender{
     sender.enabled = NO;
     _previousBtn.itemImageView.highlighted = NO;
@@ -102,5 +136,17 @@ static const int BUTTON_TAG_DEFAULT =1000; //button默认起始值
         [self.appTabbarDelegate appTabbarView:self from:_previousBtn.tag-BUTTON_TAG_DEFAULT to:selected];
     }
      _previousBtn = sender;
+}
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    UIView *view = [super hitTest:point withEvent:event];
+    if (view == nil) {
+        // 转换坐标系
+        CGPoint newPoint = [self.tabCenterPlus convertPoint:point fromView:self];
+        // 判断触摸点是否在button上
+        if (CGRectContainsPoint(self.tabCenterPlus.bounds, newPoint)) {
+            view = self.tabCenterPlus;
+        }
+    }
+    return view;
 }
 @end

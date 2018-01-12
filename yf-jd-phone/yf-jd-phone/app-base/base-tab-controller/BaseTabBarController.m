@@ -12,6 +12,7 @@
 #import "AppSubscibeViewController.h"
 #import "AppMineViewController.h"
 #import "AppTabbarModel.h"
+#import "AppLoginViewController.h"
 @interface BaseTabBarController()
 
 @property (nonatomic, strong) AppHomeViewController *homeController;
@@ -39,6 +40,7 @@
     NSLog(@"tabBar-->%@",NSStringFromCGRect(self.tabBar.frame));
     NSLog(@"myTabbarView-->%@",NSStringFromCGRect(self.myTabbarView.frame));
     [self.tabBar addSubview:self.myTabbarView];
+    
     
 }
 
@@ -70,6 +72,44 @@
 
 #pragma mark --APPTabbarView的delegate实现
 -(void)appTabbarView:(AppTabbarView *)appTabbarView from:(NSInteger)from to:(NSInteger)to{
-    self.selectedIndex = to;
+    switch (to) {
+        case 0:
+            self.selectedIndex = 0;
+            break;
+        case 1:
+            self.selectedIndex = 1;
+            break;
+        case 2:
+           self.selectedIndex = 2;
+            break;
+        case 3:
+            self.selectedIndex = 3;
+            break;
+        case 4:
+            [self handleCenterViewPush:from];
+            break;
+        default:
+            break;
+    }
 }
+-(void)handleCenterViewPush:(NSInteger)from{
+        self.tabBar.hidden = YES;
+        switch (from) {
+            case 0:
+                [UserLoginMessage shareUserLoginMessage].isLogin?NULL:[self.homeController.navigationController pushViewController:[AppLoginViewController new] animated:YES];
+                break;
+            case 1:
+                [UserLoginMessage shareUserLoginMessage].isLogin?NULL:[self.interfaceController.navigationController pushViewController:[AppLoginViewController new] animated:YES];
+                break;
+            case 2:
+                [UserLoginMessage shareUserLoginMessage].isLogin?NULL:[self.subscribeController.navigationController pushViewController:[AppLoginViewController new] animated:YES];
+                break;
+            case 3:
+                [UserLoginMessage shareUserLoginMessage].isLogin?NULL:[self.mineController.navigationController pushViewController:[AppLoginViewController new] animated:YES ];
+                break;
+            default:
+                break;
+        }
+}
+
 @end

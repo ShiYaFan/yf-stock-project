@@ -318,6 +318,10 @@
 		DC1C54151FFCF1F000D0907B /* AppSubscibeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1C54141FFCF1F000D0907B /* AppSubscibeViewController.m */; };
 		DC1C54181FFCF20800D0907B /* AppInterfaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1C54171FFCF20800D0907B /* AppInterfaceViewController.m */; };
 		DCB967CB2007593700EDD022 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		DCD3AD80200889DA006F19D8 /* home-magic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCD3AD7F200889DA006F19D8 /* home-magic@2x.png */; };
+		DCD3AD8420088BBE006F19D8 /* UIView+YFView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD3AD8320088BBE006F19D8 /* UIView+YFView.m */; };
+		DCD3AD892008915E006F19D8 /* UserLoginMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD3AD882008915E006F19D8 /* UserLoginMessage.m */; };
+		DCD3AD8C20089374006F19D8 /* AppLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD3AD8B20089374006F19D8 /* AppLoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -653,6 +657,13 @@
 		DC1C54141FFCF1F000D0907B /* AppSubscibeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppSubscibeViewController.m; sourceTree = "<group>"; };
 		DC1C54161FFCF20800D0907B /* AppInterfaceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppInterfaceViewController.h; sourceTree = "<group>"; };
 		DC1C54171FFCF20800D0907B /* AppInterfaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppInterfaceViewController.m; sourceTree = "<group>"; };
+		DCD3AD7F200889DA006F19D8 /* home-magic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home-magic@2x.png"; path = "../../../../Desktop/home-magic@2x.png"; sourceTree = "<group>"; };
+		DCD3AD8220088BBE006F19D8 /* UIView+YFView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+YFView.h"; sourceTree = "<group>"; };
+		DCD3AD8320088BBE006F19D8 /* UIView+YFView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+YFView.m"; sourceTree = "<group>"; };
+		DCD3AD872008915E006F19D8 /* UserLoginMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserLoginMessage.h; sourceTree = "<group>"; };
+		DCD3AD882008915E006F19D8 /* UserLoginMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserLoginMessage.m; sourceTree = "<group>"; };
+		DCD3AD8A20089374006F19D8 /* AppLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppLoginViewController.h; sourceTree = "<group>"; };
+		DCD3AD8B20089374006F19D8 /* AppLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppLoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -684,6 +695,7 @@
 			isa = PBXGroup;
 			children = (
 				DC0A50D31FFE064F0064911F /* checkbox_select@2x.png */,
+				DCD3AD7F200889DA006F19D8 /* home-magic@2x.png */,
 				DC0A50D41FFE064F0064911F /* mytactic@3x.png */,
 				DC0A50D51FFE064F0064911F /* factor_normal@2x.png */,
 				DC0A50D61FFE064F0064911F /* order_complete@3x.png */,
@@ -986,6 +998,7 @@
 		DC0A53141FFE0E6A0064911F /* app-category */ = {
 			isa = PBXGroup;
 			children = (
+				DCD3AD8120088B96006F19D8 /* UIView */,
 				DC0A531C1FFE137F0064911F /* UIColor */,
 			);
 			path = "app-category";
@@ -1052,6 +1065,7 @@
 			isa = PBXGroup;
 			children = (
 				DC1C53EE1FFCDAAB00D0907B /* Info.plist */,
+				DCD3AD8520088EAD006F19D8 /* app-controller */,
 				DC0A53141FFE0E6A0064911F /* app-category */,
 				DC0A50D21FFE064F0064911F /* app-pngs */,
 				DC1C540A1FFCE38A00D0907B /* app-network */,
@@ -1188,6 +1202,34 @@
 			path = "app-main-model";
 			sourceTree = "<group>";
 		};
+		DCD3AD8120088B96006F19D8 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				DCD3AD8220088BBE006F19D8 /* UIView+YFView.h */,
+				DCD3AD8320088BBE006F19D8 /* UIView+YFView.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		DCD3AD8520088EAD006F19D8 /* app-controller */ = {
+			isa = PBXGroup;
+			children = (
+				DCD3AD8620088EBB006F19D8 /* app-login */,
+			);
+			path = "app-controller";
+			sourceTree = "<group>";
+		};
+		DCD3AD8620088EBB006F19D8 /* app-login */ = {
+			isa = PBXGroup;
+			children = (
+				DCD3AD872008915E006F19D8 /* UserLoginMessage.h */,
+				DCD3AD882008915E006F19D8 /* UserLoginMessage.m */,
+				DCD3AD8A20089374006F19D8 /* AppLoginViewController.h */,
+				DCD3AD8B20089374006F19D8 /* AppLoginViewController.m */,
+			);
+			path = "app-login";
+			sourceTree = "<group>";
+		};
 		DDCDEE6835792DD223C24999 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1281,6 +1323,7 @@
 				DC0A52741FFE06500064911F /* groupMessage@3x.png in Resources */,
 				DC0A52F11FFE06500064911F /* tab_find@2x.png in Resources */,
 				DC0A52571FFE06500064911F /* tab_subscribe@3x.png in Resources */,
+				DCD3AD80200889DA006F19D8 /* home-magic@2x.png in Resources */,
 				DC0A523C1FFE06500064911F /* rankingFirst@3x.png in Resources */,
 				DC0A52281FFE06500064911F /* checkbox_select@3x.png in Resources */,
 				DC0A52BE1FFE06500064911F /* delete@2x.png in Resources */,
@@ -1628,6 +1671,7 @@
 				DC1C53FA1FFCDFEE00D0907B /* AppBaseViewController.m in Sources */,
 				DC1C54031FFCE0E600D0907B /* BaseTabBarController.m in Sources */,
 				DC1C54121FFCF1DB00D0907B /* AppMineViewController.m in Sources */,
+				DCD3AD8C20089374006F19D8 /* AppLoginViewController.m in Sources */,
 				DC1C53F01FFCDAAB00D0907B /* main.m in Sources */,
 				DC0A532F2004F8500064911F /* BannerModel.m in Sources */,
 				DC0A531F1FFE13EC0064911F /* appNetwork.m in Sources */,
@@ -1639,6 +1683,8 @@
 				DC0A50D11FFDF6600064911F /* AppBarButton.m in Sources */,
 				DC0A532C2004F6890064911F /* ItemModel.m in Sources */,
 				DC0A53232004C2980064911F /* strategy.m in Sources */,
+				DCD3AD8420088BBE006F19D8 /* UIView+YFView.m in Sources */,
+				DCD3AD892008915E006F19D8 /* UserLoginMessage.m in Sources */,
 				DC0A531A1FFE0F200064911F /* UIColor+Hex.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

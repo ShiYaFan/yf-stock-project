@@ -18,6 +18,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor redColor];
+    self.navigationItem.title = @"订阅";
+
 }
 
 - (void)didReceiveMemoryWarning {

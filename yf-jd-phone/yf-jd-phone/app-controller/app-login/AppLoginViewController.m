@@ -1,25 +1,24 @@
 //
-//  AppInterfaceViewController.m
+//  AppLoginViewController.m
 //  yf-jd-phone
 //
-//  Created by yafan on 2018/1/3.
+//  Created by yafan on 2018/1/12.
 //  Copyright © 2018年 shiyafan. All rights reserved.
 //
 
-#import "AppInterfaceViewController.h"
+#import "AppLoginViewController.h"
 
-@interface AppInterfaceViewController ()
+@interface AppLoginViewController ()
 
 @end
 
-@implementation AppInterfaceViewController
+@implementation AppLoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationItem.title = @"互动";
-
-    self.view.backgroundColor = [UIColor purpleColor];
+    self.navigationItem.title = @"登录";
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning {

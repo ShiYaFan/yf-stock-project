@@ -7,7 +7,10 @@
 //
 
 #import "AppBaseViewController.h"
-
+#import "AppInterfaceViewController.h"
+#import "AppSubscibeViewController.h"
+#import "AppMineViewController.h"
+#import "AppHomeViewController.h"
 @interface AppBaseViewController ()
 
 @end
@@ -26,5 +29,11 @@
     [super didReceiveMemoryWarning];
    
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    NSLog(@"-------------%@",self.class)
+    if ([NSStringFromClass(self.class) isEqualToString:@"AppHomeViewController"] || [NSStringFromClass(self.class) isEqualToString:@"AppMineViewController"] ||[NSStringFromClass(self.class) isEqualToString:@"AppSubscibeViewController"] ||[NSStringFromClass(self.class) isEqualToString:@"AppInterfaceViewController"]) {
+        APPDELEGATE.tabBarController.tabBar.hidden = NO;
+    }
+}
 @end
