@@ -23,6 +23,7 @@
    
 }
 -(void)dealloc{
+
      NSLog(@"\n*******成功销毁********\n %@ \n%s \n**************\n",self.class,__func__);
 }
 - (void)didReceiveMemoryWarning {
@@ -31,7 +32,6 @@
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
-    NSLog(@"-------------%@",self.class)
     if ([NSStringFromClass(self.class) isEqualToString:@"AppHomeViewController"] || [NSStringFromClass(self.class) isEqualToString:@"AppMineViewController"] ||[NSStringFromClass(self.class) isEqualToString:@"AppSubscibeViewController"] ||[NSStringFromClass(self.class) isEqualToString:@"AppInterfaceViewController"]) {
         APPDELEGATE.tabBarController.tabBar.hidden = NO;
     }
