@@ -318,10 +318,10 @@
 		DC1C54151FFCF1F000D0907B /* AppSubscibeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1C54141FFCF1F000D0907B /* AppSubscibeViewController.m */; };
 		DC1C54181FFCF20800D0907B /* AppInterfaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC1C54171FFCF20800D0907B /* AppInterfaceViewController.m */; };
 		DCB967CB2007593700EDD022 /* (null) in Resources */ = {isa = PBXBuildFile; };
-		DCD3AD80200889DA006F19D8 /* home-magic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCD3AD7F200889DA006F19D8 /* home-magic@2x.png */; };
 		DCD3AD8420088BBE006F19D8 /* UIView+YFView.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD3AD8320088BBE006F19D8 /* UIView+YFView.m */; };
 		DCD3AD892008915E006F19D8 /* UserLoginMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD3AD882008915E006F19D8 /* UserLoginMessage.m */; };
 		DCD3AD8C20089374006F19D8 /* AppLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD3AD8B20089374006F19D8 /* AppLoginViewController.m */; };
+		DCD3AD8E2009C107006F19D8 /* home-magic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DCD3AD8D2009C106006F19D8 /* home-magic@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -657,13 +657,13 @@
 		DC1C54141FFCF1F000D0907B /* AppSubscibeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppSubscibeViewController.m; sourceTree = "<group>"; };
 		DC1C54161FFCF20800D0907B /* AppInterfaceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppInterfaceViewController.h; sourceTree = "<group>"; };
 		DC1C54171FFCF20800D0907B /* AppInterfaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppInterfaceViewController.m; sourceTree = "<group>"; };
-		DCD3AD7F200889DA006F19D8 /* home-magic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home-magic@2x.png"; path = "../../../../Desktop/home-magic@2x.png"; sourceTree = "<group>"; };
 		DCD3AD8220088BBE006F19D8 /* UIView+YFView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+YFView.h"; sourceTree = "<group>"; };
 		DCD3AD8320088BBE006F19D8 /* UIView+YFView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+YFView.m"; sourceTree = "<group>"; };
 		DCD3AD872008915E006F19D8 /* UserLoginMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserLoginMessage.h; sourceTree = "<group>"; };
 		DCD3AD882008915E006F19D8 /* UserLoginMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserLoginMessage.m; sourceTree = "<group>"; };
 		DCD3AD8A20089374006F19D8 /* AppLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppLoginViewController.h; sourceTree = "<group>"; };
 		DCD3AD8B20089374006F19D8 /* AppLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppLoginViewController.m; sourceTree = "<group>"; };
+		DCD3AD8D2009C106006F19D8 /* home-magic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-magic@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -694,8 +694,8 @@
 		DC0A50D21FFE064F0064911F /* app-pngs */ = {
 			isa = PBXGroup;
 			children = (
+				DCD3AD8D2009C106006F19D8 /* home-magic@2x.png */,
 				DC0A50D31FFE064F0064911F /* checkbox_select@2x.png */,
-				DCD3AD7F200889DA006F19D8 /* home-magic@2x.png */,
 				DC0A50D41FFE064F0064911F /* mytactic@3x.png */,
 				DC0A50D51FFE064F0064911F /* factor_normal@2x.png */,
 				DC0A50D61FFE064F0064911F /* order_complete@3x.png */,
@@ -1323,7 +1323,6 @@
 				DC0A52741FFE06500064911F /* groupMessage@3x.png in Resources */,
 				DC0A52F11FFE06500064911F /* tab_find@2x.png in Resources */,
 				DC0A52571FFE06500064911F /* tab_subscribe@3x.png in Resources */,
-				DCD3AD80200889DA006F19D8 /* home-magic@2x.png in Resources */,
 				DC0A523C1FFE06500064911F /* rankingFirst@3x.png in Resources */,
 				DC0A52281FFE06500064911F /* checkbox_select@3x.png in Resources */,
 				DC0A52BE1FFE06500064911F /* delete@2x.png in Resources */,
@@ -1445,6 +1444,7 @@
 				DC0A52511FFE06500064911F /* sliderImage@3x.png in Resources */,
 				DC0A526E1FFE06500064911F /* nosubscribe@3x.png in Resources */,
 				DC0A52731FFE06500064911F /* plus_blue@2x.png in Resources */,
+				DCD3AD8E2009C107006F19D8 /* home-magic@2x.png in Resources */,
 				DC0A527A1FFE06500064911F /* 圆圈_03.png in Resources */,
 				DC0A52701FFE06500064911F /* noNetwork@2x.png in Resources */,
 				DC0A524E1FFE06500064911F /* sliderImage@2x.png in Resources */,
